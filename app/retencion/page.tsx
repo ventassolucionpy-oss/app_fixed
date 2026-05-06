@@ -82,7 +82,7 @@ PRODUCTO:
 - Descripción: ${product.description}
 - Precio de venta: Gs. ${config.precio || product.precio_venta_gs || '180.000'}
 - Categoría: ${product.category || 'general'}
-- Audiencia: ${config.audiencia || product.audiencia || pais === 'CO' ? 'compradores online Colombia' : pais === 'MX' ? 'compradores online México' : 'compradores online Paraguay'}
+- Audiencia: ${config.audiencia || product.audiencia || (pais === 'CO' ? 'compradores online Colombia' : pais === 'MX' ? 'compradores online México' : 'compradores online Paraguay')}
 
 COMPORTAMIENTO DEL CLIENTE:
 - Tiempo de entrega típico en ${paisCfg?.nombre || 'Paraguay'}: ${config.dias_entrega || '3-5'} días hábiles

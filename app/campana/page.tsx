@@ -47,16 +47,16 @@ function autoPublico(p: Product, pais: string = 'PY'): string {
   }
   
   // Productos físicos - categorías expandidas
-  if (d.match(/belleza|skin|crema|piel|cuidado facial|antiedad|serum/)) return 'Mujeres 25-50, interesadas en skincare y cuidado personal, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'} y LATAM'
-  if (d.match(/adelgazar|bajar de peso|dieta|quema grasa|silueta/)) return 'Mujeres y hombres 28-50 que quieren perder peso sin dejar de comer bien, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}'
-  if (d.match(/dolor|espalda|cuello|articulación|rodilla|lumbar/)) return 'Adultos 35-65 con dolores crónicos de espalda o articulaciones, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}'
-  if (d.match(/faja|moldeadora|cintura|abdomen/)) return 'Mujeres 25-50 que quieren lucir su figura y sentirse más seguras, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}'
-  if (d.match(/pelo|cabello|caída|crecimiento|calvicie/)) return 'Hombres y mujeres 28-55 preocupados por la caída del cabello, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}'
-  if (d.match(/tecnología|gadget|electrónico|usb|bluetooth/)) return 'Hombres 18-40, tech enthusiasts, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}'
-  if (d.match(/mascota|perro|gato|animal/)) return 'Dueños de mascotas 22-50, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}'
-  if (d.match(/bebé|niño|infantil|maternidad/)) return 'Madres y padres 24-40 con hijos pequeños, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}'
-  if (d.match(/hogar|casa|cocina|limpieza|organización/)) return 'Amas de casa y personas 28-55 que buscan soluciones para el hogar, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}'
-  if (d.match(/seguridad|cámara|alarma|protección/)) return 'Propietarios de vivienda 30-60 que valoran la seguridad del hogar, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}'
+  if (d.match(/belleza|skin|crema|piel|cuidado facial|antiedad|serum/)) return `Mujeres 25-50, interesadas en skincare y cuidado personal, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'} y LATAM`
+  if (d.match(/adelgazar|bajar de peso|dieta|quema grasa|silueta/)) return `Mujeres y hombres 28-50 que quieren perder peso sin dejar de comer bien, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}`
+  if (d.match(/dolor|espalda|cuello|articulación|rodilla|lumbar/)) return `Adultos 35-65 con dolores crónicos de espalda o articulaciones, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}`
+  if (d.match(/faja|moldeadora|cintura|abdomen/)) return `Mujeres 25-50 que quieren lucir su figura y sentirse más seguras, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}`
+  if (d.match(/pelo|cabello|caída|crecimiento|calvicie/)) return `Hombres y mujeres 28-55 preocupados por la caída del cabello, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}`
+  if (d.match(/tecnología|gadget|electrónico|usb|bluetooth/)) return `Hombres 18-40, tech enthusiasts, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}`
+  if (d.match(/mascota|perro|gato|animal/)) return `Dueños de mascotas 22-50, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}`
+  if (d.match(/bebé|niño|infantil|maternidad/)) return `Madres y padres 24-40 con hijos pequeños, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}`
+  if (d.match(/hogar|casa|cocina|limpieza|organización/)) return `Amas de casa y personas 28-55 que buscan soluciones para el hogar, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}`
+  if (d.match(/seguridad|cámara|alarma|protección/)) return `Propietarios de vivienda 30-60 que valoran la seguridad del hogar, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}`
   
   // Fallback con el nombre del producto
   return \`Compradores online 22-50 interesados en \${p.name}, clase media, ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}\`

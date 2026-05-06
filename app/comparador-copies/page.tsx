@@ -33,7 +33,7 @@ async function callClaude(copies: string[], producto: string, objetivo: string):
   const prompt = `Sos un experto en media buying y copywriting para dropshipping en ${pais === 'CO' ? 'Colombia' : pais === 'MX' ? 'México' : 'Paraguay'}. Analizás copies de anuncios y los ordenás por probabilidad de conversión.
 
 PRODUCTO: ${producto}
-OBJETIVO: ${objetivo || pais === 'CO' ? 'Ventas directas COD Colombia' : pais === 'MX' ? 'Ventas directas COD México' : 'Ventas directas COD Paraguay'}
+OBJETIVO: ${objetivo || (pais === 'CO' ? 'Ventas directas COD Colombia' : pais === 'MX' ? 'Ventas directas COD México' : 'Ventas directas COD Paraguay')}
 
 COPIES A ANALIZAR:
 ${copiesFormateados}

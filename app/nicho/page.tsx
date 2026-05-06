@@ -104,7 +104,6 @@ Respondé SOLO con JSON válido:
 export default function NichoPage() {
   const [producto, setProducto] = useState('')
   const [descripcion, setDescripcion] = useState('')
-  const [pais, setPais] = useState('Paraguay')
   const [modelo, setModelo] = useState('Dropshipping')
   const [output, setOutput] = useState<NichoOutput | null>(null)
   const { pais, cfg } = usePais()
@@ -166,7 +165,8 @@ export default function NichoPage() {
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <label className="block text-xs font-medium text-white/40 mb-1.5">País objetivo</label>
-                <select className="input cursor-pointer" value={pais} onChange={e => setPais(e.target.value)}>
+                <select className="input cursor-pointer" value={pais} onChange={e => (() => {})(// setPais removed - use country switcher
+  //e.target.value)}>
                   {['Paraguay', 'Colombia', 'México'].map(o => <option key={o} value={o} style={{ background: '#111' }}>{o}</option>)}
                 </select>
               </div>

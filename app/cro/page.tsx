@@ -53,7 +53,7 @@ DATOS DE LA PÁGINA A ANALIZAR:
 - URL o descripción: ${config.url_o_desc}
 - Producto: ${config.producto}
 - Precio: ${config.precio || 'no especificado'}
-- Audiencia objetivo: ${config.audiencia || pais === 'CO' ? 'compradores online Colombia' : pais === 'MX' ? 'compradores online México' : 'compradores online Paraguay'}
+- Audiencia objetivo: ${config.audiencia || (pais === 'CO' ? 'compradores online Colombia' : pais === 'MX' ? 'compradores online México' : 'compradores online Paraguay')}
 - Fuente de tráfico: ${config.fuente || 'Meta Ads (Facebook/Instagram)'}
 - Tasa de conversión actual: ${config.tasa_conversion || 'desconocida'}
 - Descripción del contenido de la página: ${config.descripcion_contenido || 'no provista'}

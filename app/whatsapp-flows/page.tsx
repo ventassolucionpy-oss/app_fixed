@@ -237,7 +237,6 @@ export default function WhatsAppFlowsPage() {
   const [producto, setProducto] = useState('')
   const [precio, setPrecio] = useState('')
   const [beneficio, setBeneficio] = useState('')
-  const [pais, setPais] = useState('PY')
   const [negocio, setNegocio] = useState('dropshipping COD')
   const { pais, cfg } = usePais()
   const [loading, setLoading] = useState(false)

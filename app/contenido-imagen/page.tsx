@@ -26,10 +26,10 @@ type ImagePromptOutput = {
 }
 
 async function callClaude(producto: string, audiencia: string, beneficio: string, angulos: string[], categoria: string, precio: string): Promise<ImagePromptOutput> {
-    const prompt = `Sos un director de arte especialista en performance marketing para Meta Ads y dropshipping COD en ${paisCfg?.nombre || '${paisCfg?.nombre || 'Paraguay'}'}. Generás prompts ultra-específicos para Gemini Imagen / Gemini Banana Pro para crear imágenes de anuncios que paran el scroll.
+    const prompt = `Sos un director de arte especialista en performance marketing para Meta Ads y dropshipping COD en ${cfg?.nombre || 'Paraguay'}. Generás prompts ultra-específicos para Gemini Imagen / Gemini Banana Pro para crear imágenes de anuncios que paran el scroll.
 
 PRODUCTO: ${producto}
-AUDIENCIA: ${audiencia || pais === 'CO' ? 'Adultos 25-50 Colombia' : pais === 'MX' ? 'Adultos 25-50 México' : 'Adultos 25-50 Paraguay'}
+AUDIENCIA: ${audiencia || (pais === 'CO' ? 'Adultos 25-50 Colombia' : pais === 'MX' ? 'Adultos 25-50 México' : 'Adultos 25-50 Paraguay')}
 BENEFICIO PRINCIPAL: ${beneficio}
 ÁNGULOS DE VENTA: ${angulos.filter(Boolean).join(', ') || 'transformación, dolor, aspiración'}
 CATEGORÍA: ${categoria}
